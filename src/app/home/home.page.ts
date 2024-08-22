@@ -11,7 +11,7 @@ import { AlertController } from '@ionic/angular';
 })
 export class HomePage {
 
-  imgSrc: SafeUrl | undefined;
+  imgSrc: SafeUrl | undefined = "../../assets/manioc.jpg";
   lines: string[] = [];
   message: string = '';
   busy = false;

@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Text Recognition
+      Inhaltsstoff Scanner
     </ion-title>
 
   </ion-toolbar>
@@ -47,16 +47,21 @@
 
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Text Recognition</ion-title>
+      <ion-title size="large">Kotzalarm</ion-title>
     </ion-toolbar>
   </ion-header>
   <div id="container">
     <img [src]="imgSrc" />
+    @if (imgSrc === "../../assets/manioc.jpg") {
+      <br>
+      <ion-title>Ready to scan</ion-title>
+    } 
+    
   </div>
   <ion-list [inset]="true">
     <ion-item *ngIf="message">{{message}}</ion-item>
     <ion-list-header *ngIf="lines.length > 0">
-      <ion-label>Found Text</ion-label>
+      <ion-label>Inhaltsstoffliste</ion-label>
     </ion-list-header>
     <ion-item *ngFor="let line of lines">{{line}}</ion-item>
   </ion-list>
